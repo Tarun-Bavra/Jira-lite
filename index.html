@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0" />
+    <title>Jira-Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button>Create</button>
+    <main>
+      <section class="container" id="todo">
+        <h2>TODO</h2>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="in-progress">
+        <h2>In-Progress</h2>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="done">
+        <h2>DONE</h2>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+        <div class="task-card" title="This is a Dummy Task">
+          <h3>Chat Box</h3>
+          <div>
+            <span class="badge">3 Days</span>
+            <span class="image">S</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- PopUp -->
+    <section class="modal">
+      <!-- form -->
+      <form id="Create-task-form">
+        <input type="text" name="title" required >
+        <textarea name="description" rows="3"  cols="30" required ></textarea>
+        <input type="text" name="developer" required>
+        <input type="number" name="estimate" placeholder="estimated time in days" required >
+        <select name="status" required>
+          <option value="TODO">To Do</option>
+          <option value="INPROGRESS">In Progress</option>
+          <option value="DONE">Done</option>
+        </select>
+        <!-- button  -->
+        <button>Create New Task</button>
+      </form>
+    </section>
+    <!-- script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
