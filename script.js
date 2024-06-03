@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
   console.log(taskInfo);
 });
 
-/*
+
 
  <div class="task-card" title="This is a Dummy Task">
   <h3>Chat Box</h3>
@@ -22,4 +22,4 @@ form.addEventListener("submit", (e) => {
   </div>
 </div> 
 
-*/
+
