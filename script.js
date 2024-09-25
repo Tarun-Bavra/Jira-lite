@@ -1,8 +1,8 @@
 const form = document.getElementById("create-task-form");
-
-form.addEventListener("submit", (eventDetails) => {            
-  eventDetails.preventDefault();
-  const taskStatus = document.getElementById("status").value;
+const modal = document.getElementById("modal");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const taskStatus = form.status.value; // TODO | INPROGRESS | DONE
 
   const taskInfo = {
     title: form.title.value,
@@ -10,17 +10,27 @@ form.addEventListener("submit", (eventDetails) => {
     developer: form.developer.value,
     estimate: form.estimate.value,
   };
-  console.log(taskInfo);
+
+  const taskCard = document.createElement("div");
+  taskCard.className = "task-card";
+  taskCard.title = taskInfo.description;
+
+  taskCard.innerHTML = `
+  <h3>${taskInfo.title}</h3>
+  <div>
+    <span class="badge">${taskInfo.estimate} Days</span>
+    <span class="image">${taskInfo.developer[0].toUpperCase()}</span>
+  </div>
+`;
+
+  const taskContainer = document.getElementById(taskStatus);
+  taskContainer.appendChild(taskCard);
 });
 
-
-
-//  <div class="task-card" title="This is a Dummy Task">
-//   <h3>Chat Box</h3>
-//   <div>
-//     <span class="badge">3 Days</span>
-//     <span class="image">S</span>
-//   </div>
-// </div> 
-
-
+function toggleModal(element) {
+  modal.classList.toggle("hide-modal");
+  //when hide-modal is present the innerText of icon = keyboard_arrow_up : keyboard_arrow_down
+  element.innerText = modal.classList.contains("hide-modal")
+    ? "keyboard_arrow_up"
+    : "keyboard_arrow_down";
+}

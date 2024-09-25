@@ -5,99 +5,42 @@
     <meta name="viewport" content="width=device-width" , initial-scale=1.0" />
     <title>Jira-Dashboard</title>
     <link rel="stylesheet" href="./style.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
   </head>
 
   <body>
     <button>Create</button>
     <main>
-      <section class="container" id="todo">
+      <section class="container" id="TODO">
         <h2>TODO</h2>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
       </section>
-      <section class="container" id="in-progress">
-        <h2>In-Progress</h2>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
+      <section class="container" id="INPROGRESS">
+        <h2>In Progress</h2>
       </section>
-      <section class="container" id="done">
+      <section class="container" id="DONE">
         <h2>DONE</h2>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
-        <div class="task-card" title="This is a Dummy Task">
-          <h3>Chat Box</h3>
-          <div>
-            <span class="badge">3 Days</span>
-            <span class="image">S</span>
-          </div>
-        </div>
       </section>
     </main>
     <!-- PopUp -->
-    <section class="modal">
+    <section class="modal hide-modal" id="modal">
       <!-- form -->
       <!-- fa-chevron-circle-down -->
-      <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-      <form id="Create-task-form">
-        <span class="toggle-icon" id="toggleIcon">▼▲</span>
-        <input type="text" name="title" placeholder="Task" required />
+      <!-- <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> -->
+      <span class="material-symbols-outlined toggle" onclick="toggleModal(this)"> keyboard_arrow_up </span>
+      <!-- <span class="material-symbols-outlined toggle"> collapse_all </span> -->
+      <form id="create-task-form">
+        <!-- <span class="toggle-icon" id="toggleIcon">▼▲</span> -->
+        <input type="text" name="title" placeholder="Task Title" required />
         <textarea
           name="description"
-          placeholder="Description"
+          placeholder="Task Description"
           rows="3"
           cols="30"
           required
@@ -105,7 +48,7 @@
         <input
           type="text"
           name="developer"
-          placeholder="Developer-Name"
+          placeholder="Developer Name"
           required
         />
         <input
@@ -114,7 +57,7 @@
           placeholder="Estimated time in days"
           required
         />
-        <select id="status" name="status" required>
+        <select name="status" required>
           <option value="TODO">To Do</option>
           <option value="INPROGRESS">In Progress</option>
           <option value="DONE">Done</option>

@@ -49,29 +49,37 @@ main {
   padding: 50px;
 }
 .modal {
-  width: 30%;
-  height: 40%;
+  width: 500px;
   position: fixed;
-  bottom: 30px;
-  right: 60px;
+  bottom: 10px;
+  right: 10px;
   border-radius: 10px;
-  box-shadow: 4px 4px 10px #e7e7e7;
   padding: 30px 10px;
-  z-index: 100;
-  background-color:white;
-  /* background-color: #f1efef; */
-  overflow-x:hidden;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 2px 2px 10px #e7e7e7;
+  /* top:90vh */
 }
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-left: 20px;
+  margin-top: 30px;
 }
-#toggleIcon {
+/* #toggleIcon {
   position: relative;
   left: 420px;
   bottom: 40px;
+} */
+.toggle {
+  position: absolute;
+  top: 1px;
+  right: 4px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 5px;
 }
 input {
   font-size: 16px;
@@ -95,4 +103,11 @@ textarea {
 textarea:focus {
   border-color: #4991dd;
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.hide-modal {
+  top: 90vh;
+}
+.hide-modal form {
+  display: none;
 }
