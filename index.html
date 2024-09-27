@@ -16,7 +16,6 @@
   </head>
 
   <body>
-    <button>Create</button>
     <main>
       <section class="container" id="TODO">
         <h2>TODO</h2>
@@ -33,7 +32,12 @@
       <!-- form -->
       <!-- fa-chevron-circle-down -->
       <!-- <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> -->
-      <span class="material-symbols-outlined toggle" onclick="toggleModal(this)"> keyboard_arrow_up </span>
+      <span
+        class="material-symbols-outlined toggle"
+        onclick="toggleModal(this)"
+      >
+        keyboard_arrow_up
+      </span>
       <!-- <span class="material-symbols-outlined toggle"> collapse_all </span> -->
       <form id="create-task-form">
         <!-- <span class="toggle-icon" id="toggleIcon">▼▲</span> -->
@@ -67,6 +71,7 @@
       </form>
     </section>
     <!-- script -->
+    <script src="./drag-drop.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

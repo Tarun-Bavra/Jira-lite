@@ -10,6 +10,7 @@
   box-shadow: 2px 2px 8px #e7e7e7;
   border-radius: 6px;
   padding: 4px;
+  background-color: #fff;
 }
 .badge {
   background-color: #e7e7e7;
@@ -53,12 +54,14 @@ main {
   position: fixed;
   bottom: 10px;
   right: 10px;
+  /* top:40vh; */
+  height: 40vh;
   border-radius: 10px;
   padding: 30px 10px;
   z-index: 10;
   background-color: white;
   box-shadow: 2px 2px 10px #e7e7e7;
-  /* top:90vh */
+  transition: top 0.9s linear;
 }
 form {
   display: flex;
@@ -67,11 +70,6 @@ form {
   padding-left: 20px;
   margin-top: 30px;
 }
-/* #toggleIcon {
-  position: relative;
-  left: 420px;
-  bottom: 40px;
-} */
 .toggle {
   position: absolute;
   top: 1px;
@@ -104,9 +102,9 @@ textarea:focus {
   border-color: #4991dd;
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
 }
-
 .hide-modal {
-  top: 90vh;
+  /* top: 93vh; */
+  height: 0px;
 }
 .hide-modal form {
   display: none;

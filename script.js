@@ -14,6 +14,8 @@ form.addEventListener("submit", (e) => {
   const taskCard = document.createElement("div");
   taskCard.className = "task-card";
   taskCard.title = taskInfo.description;
+  taskCard.draggable = true;
+  taskCard.addEventListener("dragstart",onDragStart)
 
   taskCard.innerHTML = `
   <h3>${taskInfo.title}</h3>
